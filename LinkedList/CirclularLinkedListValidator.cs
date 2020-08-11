@@ -26,12 +26,17 @@ namespace LinkedList
 
             int count = 1;
 
-            while (count < linkedList.Count())
+            while (count < linkedList.Count)
             {
                 node = node.Next;
                 count++;
             }
 
-            return !(node == linkedList.Last);        }
+            if (node.Next != null)
+            {
+                return false;
+            }
+
+            return true;        }
     }
 }
